@@ -48,13 +48,18 @@
     run in a development mode
         
         export FLASK_ENV=development
-        export FLASK_APP=app.py
-        flask run
+        python app.py
+        # or
+        python3 app.py
     
     or run in a production mode
    
         uwsgi app.ini 
     
     Then visit http://localhost:5000/
+    
+    Example:
+    
+    http://localhost:5000/restaurants/search?q=sushi&lat=60.17045&lon=24.93147
    
     
