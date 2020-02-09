@@ -29,28 +29,32 @@
   
 * **How to Run**
 
-    Unzip the project zip file somewhere you want, then
-    
-        cd restaurants_search
-        pip install -r requirements.txt
-        # or
-        pip3 install -r requirements.txt
-
-	1.run in a development mode
-	    
-        export FLASK_ENV=development
-        flask run
-        
-    2.or run in a production mode
-   
-        uwsgi app.ini 
-   
-    3.Also deploy to: 
-    http://qianqianq.pythonanywhere.com/
+    1.Deployed to: http://qianqianq.pythonanywhere.com/, and you can visit it directly 
 
     Example:
     
     http://qianqianq.pythonanywhere.com/restaurants/search?q=sushi&lat=60.17045&lon=24.93147
     
- 
-
+    2.Run from the source code 
+    
+    unzip the project zip file somewhere you want, then
+        
+        cd restaurants_search
+        # in your virtual environment (>=python3.5)
+        pip install -r requirements.txt
+        # or maybe you need
+        pip3 install -r requirements.txt
+        
+    run in a development mode
+        
+        export FLASK_ENV=development
+        export FLASK_APP=app.py
+        flask run
+    
+    or run in a production mode
+   
+        uwsgi app.ini 
+    
+    Then visit http://localhost:5000/
+   
+    
