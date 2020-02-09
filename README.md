@@ -45,6 +45,8 @@
         # or maybe you need
         pip3 install -r requirements.txt
         
+    If fail to install some packages, updating `pip` (`pip install --upgrade pip`) may solve the problem
+    
     run in a development mode
         
         export FLASK_ENV=development
