@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='helpers.js') }}"></script>
+    <title>Restaurants Display</title>
+</head>
+<body>
+    <button type="button" class="btn btn-outline-primary" id="sort" value=0
+    >Sort alphabetically</button>
+</div>
+    <div id="list"></div>
+</body>
+{% block scripts %}
+<script src="{{ url_for('static', filename='helpers.js') }}"></script>
+<script>
+var restaurants = {{restaurants|tojson|safe }};
+$(function () {
+    display(restaurants);
+    sort(restaurants);
+});
+</script>
+{% endblock %}
+</html>
+
+
