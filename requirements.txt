@@ -1,3 +1,3 @@
-Flask==1.1.1
+Flask==2.2.5
 uWSGI==2.0.18
 pytest-check==0.3.7
